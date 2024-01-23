@@ -1,42 +1,77 @@
 /*
- 
  [Master Stylesheet]
 
- Project:   VirtualGram Template
+ Project:   PortFolio
  Version:   1.0
- Author:    Mikhail Abdillah
- Website:   https://www.macode.web.id/
+ Author:    LeChatLyon
+ Website:   https://lechatlyon.github.io/website/
 
  [Table of contents]
- 0. CARD
- 1. Basic
- 2. Button
- 3. Color Scheme
- 4. Progress bar
- 5. Theme list
- 6. Timeline
- 7. Navigation
- 8. Sidebar
- 9. Page Style
- 10. Social
- 11. Theme Color
- 12. Reveal
- 13. Page Switching
- 14. Carousel
- 15. Grid (OpenGraph)
-
+ 0. Color
+ 1. Typographie
+ 2. CARD
+ 3. Basic
+ 4. Button
+ 5. Color Scheme
+ 6. Progress bar
+ 7. Theme list
+ 8. Timeline
+ 9. Navigation
+ 10. Sidebar
+ 11. Page Style
+ 12. Social
+ 13. Theme Color
+ 14. Reveal
+ 15. Page Switching
+ 16. Carousel
+ 17. Grid (OpenGraph)
+ 18. Dark theme
  */
-
- :root {
+/* 
+    0. Color
+*/
+:root {
     --theme-orange: #fd7e14;
+    --LeChatLyon: #E89C1B;
+    --LeChatLyon-Hover: #3c49ff;
     --blue: #3164F4;
-    --rouge: #E14631
+    --rouge: #E14631;
+    --gros-fonce: #313638;
+    --blue-active: #2184f5;
+    --white: #ffffff;
+    --white-2: #f2f4fa;
+    --background: #000000;
+    --background-2: #202022;
+    --background-3: #323131;
+    --grey: #808080;
+    --grey-1: #747474;
+    --grey-2: #888;
+    --grey-3: #ddd;
+    --grey-4: #ccc;
+    --grey-5: #9FA2AB;
+    --page: #52565c;
+    --vg-footer: #202334;
+    --footer: #171925;
+    --icone: #292e3b;
+    --post-tile: #777c6c;
+    --post-date: #777;
 }
+@media (prefers-color-scheme: light) {
+    :root {
+      --body-bg: black;
+      --body-color: white;
+      --anchor-color: salmon;
+      --letter-spacing: 0.1;
+    }
+  }
 
+/* 
+    1. Typographie
+*/
 .background-gris {
     top: 0;
     margin-right: 75%;
-    background-color: rgb(49, 54, 56);
+    background-color: var(--background)
 }
 
 /* Light */
@@ -67,7 +102,7 @@
 }
 
 /* 
-    0. CARD
+    2. CARD
 */
 
 .troisd-card {
@@ -171,13 +206,14 @@
 
 
 /* 
-    1. Basic
+    3. Basic
 */
 
 
 body {
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
+    background-color: var(--background);
 }
 
 .fw-bold {
@@ -209,7 +245,7 @@ body {
 }
 
 a:hover, a:active {
-    color: #2184f5;
+    color: var(--blue-active);
 }
 
 /* Image Responsive */
@@ -238,17 +274,17 @@ a:hover, a:active {
 }
 
 /* 
-    2. Button
+    4. Button
 */
 .btn-theme {
     padding: 10px 30px;
     margin: 5px;
     height: unset;
-    background-color: #747474;
-    color: #fff;
+    background-color: var(--grey-1);
+    color: var(--white);
     font-weight: 500;
     border-radius: 6px;
-    box-shadow: 0 0 0 2px #fff, 0 3px 9px rgba(0,0,0,0.3);
+    box-shadow: 0 0 0 2px var(--white), 0 3px 9px rgba(0,0,0,0.3);
 }
 
 .btn-theme-red {
@@ -257,16 +293,16 @@ a:hover, a:active {
     height: unset;
     font-weight: 500;
     border-radius: 6px;
-    box-shadow: 0 0 0 2px #fff, 0 3px 9px rgba(0,0,0,0.3);
+    box-shadow: 0 0 0 2px var(--white), 0 3px 9px rgba(0,0,0,0.3);
 }
 
 .btn-theme:hover, .btn-theme:active {
-    background-color: #808080;
-    color: #fff;
+    background-color: var(--grey);
+    color: var(--white);
 }
 
 .btn-theme:focus {
-    box-shadow: 0 0 0 3px #fff, 0 0 0 5px #747474;
+    box-shadow: 0 0 0 3px var(--white), 0 0 0 5px var(--grey-1);
 }
 
 .btn-theme.no-shadow {
@@ -278,21 +314,21 @@ a:hover, a:active {
     margin: 50px;
     height: unset;
     background-color: transparent;
-    color: #E14631;
+    color: var(--rouge);
     border: 0;
     font-weight: 500;
-    box-shadow: 0 0 0 2px #E14631;
+    box-shadow: 0 0 0 2px var(--rouge);
 }
 
 .btn-theme-outline:hover {
-    background-color: #E14631;
-    color: #fff;
+    background-color: var(--rouge);
+    color: var(--white);
 }
 
 .btn-theme-outline:focus {
-    background-color: #E14631;
-    color: #fff;
-    box-shadow: 0 0 0 3px #fff, 0 0 0 5px #E14631;
+    background-color: var(--rouge);
+    color: var(--white);
+    box-shadow: 0 0 0 3px var(--white), 0 0 0 5px var(--rouge);;
 }
 
 .btn-theme-outline2 {
@@ -300,21 +336,21 @@ a:hover, a:active {
     margin: 50px;
     height: unset;
     background-color: transparent;
-    color: #E14631;
+    color: var(--rouge);
     border: 0;
     font-weight: 500;
-    box-shadow: 0 0 0 2px #E14631;
+    box-shadow: 0 0 0 2px var(--rouge);
 }
 
 .btn-theme-outline2:hover {
-    background-color: #E14631;
-    color: #fff;
+    background-color: var(--rouge);
+    color: var(--white);
 }
 
 .btn-theme-outline2:focus {
-    background-color: #E14631;
-    color: #fff;
-    box-shadow: 0 0 0 3px #fff, 0 0 0 5px #E14631;
+    background-color: var(--rouge);
+    color: var(--white);
+    box-shadow: 0 0 0 3px var(--white), 0 0 0 5px var(--rouge);
 }
 
 .btn-rounded {
@@ -364,17 +400,17 @@ a:hover, a:active {
     text-decoration: none;
     line-height: 35px;
     font-size: 12px;
-    background-color: #fff;
-    color: #888;
-    border: 1px solid #ddd;
+    background-color: var(--white);
+    color: var(--grey-2);
+    border: 1px solid var(--grey-3);
     -webkit-transition: all .3s;
        -moz-transition: all .3s;
             transition: all .3s;
 }
 
 .social .social-link:hover {
-    background-color: #ddd;
-    color: #fff;
+    background-color: var(--grey-3);
+    color: var(--white);
     border-color: transparent;
 }
 
@@ -389,8 +425,8 @@ a:hover, a:active {
     text-align: center;
     font-size: 18px;
     border-radius: 50%;
-    background-color: #52565c;
-    color: #fff;
+    background-color: var(--page);
+    color: var(--white);
     visibility: hidden;
     cursor: pointer;
     box-shadow: 0 3px 9px rgba(0, 0, 0, 0.4);
@@ -418,20 +454,20 @@ a:hover, a:active {
     float: left;
     margin: 0 !important;
     padding: 5px;
-    background-color: #fff;
+    background-color: var(--white);
     border-radius: 12px 0 0 12px;
     box-shadow: -3px 2px 9px rgba(50, 50, 50, 0.2);
 }
 
 .template-config .btn-fab {
     background-color: transparent !important;
-    color: #52565c !important;
+    color: var(--page) !important;
     margin: 3px 0;
 }
 
 .template-config .btn-fab:hover,
 .template-config .btn-fab:focus {
-    background-color: #f2f4fa !important;
+    background-color: var(--white-2) !important;
 }
 
 .color-bar {
@@ -463,25 +499,25 @@ a:hover, a:active {
     display: inline-block;
     margin: 0 !important;
     padding: 10px 15px;
-    background-color: #fff;
+    background-color: var(--white);
     box-shadow: 2px 2px 4px rgba(50, 50, 50, 0.2);
 }
 
 
 /* 
-    3. Color Scheme
+    5. Color Scheme
 */
 
 .bg-theme-gradient {
-    background-image: linear-gradient(to right, #f55745 0%, #8490ff 100%) !important;
+    background-image: linear-gradient(to right, var(--rouge) 0%, var(--blue) 100%) !important;
 }
 
 .bg-theme-red {
-    background-color: #E14631 !important;
+    background-color: var(--rouge) !important;
 }
 
 .fg-theme-rouge {
-    color: #E14631 !important;
+    color: var(--rouge) !important;
 }
 
 .fg-dark {
@@ -489,7 +525,7 @@ a:hover, a:active {
 }
 
 .fg-white {
-    color: #fff !important;
+    color: var(--white) !important;
 }
 
 
@@ -552,7 +588,7 @@ a:hover, a:active {
 
 .bg-snapchat,
 .bg-hover-snapchat:hover {
-    background-color: #FFFC00 !important;
+    background-color: #d1ff02 !important;
 }
 
 .bg-tumblr,
@@ -566,7 +602,7 @@ a:hover, a:active {
 }
 
 /* 
-    4. Progressbar
+    6. Progressbar
 */
 .progress-wrapper {
     display: block;
@@ -580,9 +616,9 @@ a:hover, a:active {
 .progress {
     margin-top: 5px;
     height: 1.25rem;
-    border: 2px solid #fff;
-    background-color: #fff;
-    box-shadow: 0 0 0 2px #E14631;
+    border: 2px solid var(--background-2);
+    background-color: var(--background);
+    box-shadow: 0 0 0 2px var(--rouge);
 }
 
 .progress,
@@ -592,30 +628,30 @@ a:hover, a:active {
 
 .progress-bar {
     font-size: 12px;
-    background-color: #E14631;
+    background-color: var(--rouge);
 }
 
 /* 
-    5. Preloader
+    7. Preloader
 */
 
 /* 
-    6. Pagination
+    8. Pagination
 */
 .page-item:not(:last-child) .page-link {
     margin-right: 8px;
 }
 
 .page-item.active .page-link {
-    background-color: #52565c;
-    color: #fff;
+    background-color: var(--page);
+    color: var(--white);
 }
 
 .page-link {
     border: 0;
     padding: 10px 16px;
-    background-color: #f2f4fa;
-    color: #52565c;
+    background-color: var(--white-2);
+    color: var(--page);
 }
 
 .page-link:hover {
@@ -628,7 +664,7 @@ a:hover, a:active {
 
 
 /* 
-    7. List style
+    9. List style
 */
 .theme-list {
     position: relative;
@@ -646,7 +682,7 @@ a:hover, a:active {
     margin: auto;
     width: 1px;
     height: 85%;
-    background-color: #cacdd6;
+    background-color: var(--white);
     z-index: -1;
 }
 
@@ -663,12 +699,12 @@ a:hover, a:active {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #fff;
-    border: 2px solid #E14631;
+    background-color: var(--background);
+    border: 2px solid var(--rouge);
 }
 
 /*
- *  8. Navigation 
+ *  10. Navigation 
  */
 .sticky {
     top: 0;
@@ -714,7 +750,7 @@ a:hover, a:active {
 }
 
 /* 
- *  9. Input
+ *  11. Input
  */
 .form-control {
     height: unset;
@@ -745,7 +781,7 @@ a:hover, a:active {
 }
 
 /* 
- *  10. Select
+ *  12. Select
  */
 .vg-select {
     width: 100%;
@@ -770,7 +806,7 @@ a:hover, a:active {
 
 
 /*
- *  8. Page Animation
+ *  14. Page Animation
  */
 
 /* Reveal */
@@ -780,7 +816,7 @@ a:hover, a:active {
     left: 0;
     width: 100%;
     height: 0;
-    background: #202022;
+    background: var(--background-2);
     z-index: 98;
 }
 
@@ -860,10 +896,10 @@ a:hover, a:active {
 
 
 /*
-    10. Plugins
+    Plugins
 */
 
-/* Owl Carousel */
+/* 16.Owl Carousel */
 .owl-header {
     position: relative;
     display: flex;
@@ -882,7 +918,7 @@ a:hover, a:active {
     border-radius: 50%;
     text-align: center;
     background-color: #acacac;
-    color: #fff;
+    color: var(--white);
 }
 
 .owl-header .time {
@@ -897,7 +933,7 @@ a:hover, a:active {
     margin: auto;
     width: 30px;height: 30px;
     border-radius: 50%;
-    background-color: #fff !important;
+    background-color: var(--white) !important;
     outline: none !important;
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
     opacity: 0;
@@ -929,7 +965,7 @@ a:hover, a:active {
     width: 100%;height: 50px;
     line-height: 50px;
     text-align: center;
-    background: #fff;
+    background: var(--white);
 }
 
 .owl-dots .owl-dot {
@@ -943,14 +979,14 @@ a:hover, a:active {
     display: block;
     width: 10px;height: 10px;
     border-radius: 50%;
-    background: #dadada;
+    background: var(--grey-3);
 }
 
 .owl-dots .owl-dot.active span {
-    background: #3c94f8;
+    background: var(--blue-active);
 }
 
-/* OpenGraph Grid */
+/* 17.OpenGraph Grid */
 .og-grid {
 	position: relative;
 	display: flex;
@@ -997,7 +1033,7 @@ a:hover, a:active {
 	height: 0;
 	width: 0;
 	pointer-events: none;
-	border-bottom-color: #f0f3f8;
+	border-bottom-color: var(--grey-3);
 	border-width: 15px;
 	margin: -20px 0 0 -15px;
 }
@@ -1008,7 +1044,7 @@ a:hover, a:active {
 
 .og-expander {
 	position: absolute;
-	background: #f0f3f8;
+	background: var(--grey-3);
 	top: auto;
 	left: 0;
 	width: 100%;
@@ -1042,7 +1078,7 @@ a:hover, a:active {
 	width: 100%;
 	top: 50%;
 	height: 1px;
-	background: #888;
+	background: var(--grey-2);
 	-webkit-transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
 	transform: rotate(45deg);
@@ -1094,8 +1130,8 @@ a:hover, a:active {
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	background: #ddd;
-	box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ccc;
+	background: var(--grey-3);
+	box-shadow: 0 0 1px var(--grey-4), 15px 30px 1px var(--grey-4), -15px 30px 1px var(--grey-4);
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -1106,21 +1142,21 @@ a:hover, a:active {
 }
 
 @-webkit-keyframes loader {
-	0% { background: #ddd; }
-	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
-	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+	0% { background: var(--grey-3); }
+	33% { background: var(--grey-4); box-shadow: 0 0 1px var(--grey-4), 15px 30px 1px var(--grey-4), -15px 30px 1px var(--grey-3); }
+	66% { background: var(--grey-4); box-shadow: 0 0 1px var(--grey-4), 15px 30px 1px var(--grey-3), -15px 30px 1px var(--grey-4); }
 }
 
 @-moz-keyframes loader {
-	0% { background: #ddd; }
-	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
-	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+	0% { background: var(--grey-3); }
+	33% { background: var(--grey-4); box-shadow: 0 0 1px var(--grey-4), 15px 30px 1px var(--grey-4), -15px 30px 1px var(--grey-3); }
+	66% { background: var(--grey-4); box-shadow: 0 0 1px var(--grey-4), 15px 30px 1px var(--grey-3), -15px 30px 1px var(--grey-4); }
 }
 
 @keyframes loader {
-	0% { background: #ddd; }
-	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
-	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+	0% { background: var(--grey-3); }
+	33% { background: var(--grey-4); box-shadow: 0 0 1px var(--grey-4), 15px 30px 1px var(--grey-4), -15px 30px 1px var(--grey-3); }
+	66% { background: var(--grey-4); box-shadow: 0 0 1px var(--grey-4), 15px 30px 1px var(--grey-3), -15px 30px 1px var(--grey-4); }
 }
 
 @media (min-width: 640px) {
@@ -1193,8 +1229,8 @@ a:hover, a:active {
     bottom: 0;
     padding: 12px 16px;
     width: 100%;
-    background-color: #323131;
-    color: #fff;
+    background-color: var(--background-3);
+    color: var(--white);
     z-index: 11;
 }
 
@@ -1221,3 +1257,5 @@ a:hover, a:active {
         width: 33.33333%;
     }
 }
+
+/* 18.Dark Theme */
