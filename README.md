@@ -24,6 +24,7 @@
 - Custom scrollbar
 - From bottom to top
 - Contact footer
+- Dark Theme and Light Theme
 
 ## 🤝 Author
 

@@ -25,7 +25,6 @@
  15. Page Switching
  16. Carousel
  17. Grid (OpenGraph)
- 18. Dark theme
  */
 /* 
     0. Color
@@ -1257,5 +1256,3 @@ a:hover, a:active {
         width: 33.33333%;
     }
 }
-
-/* 18.Dark Theme */
